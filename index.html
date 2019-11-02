@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" title="Prince Lionheart">
+                <img src="https://www.princelionheart.com/skin/frontend/CTprince/default/images/prince-lionheart-logo.jpg"
+                    alt="Prince Lionheart" /><img
+                    src="https://www.princelionheart.com/skin/frontend/CTprince/default/images/prince-lionheart-logo-mobile.png"
+                    alt="Prince Lionheart" /></a>
+        </header>
+        <div id="main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="customerservice.html">Customer service</a>
+                <a class="navbar-brand" href="Youraccount.html">Your account</a>
+                <a class="navbar-brand" href="mycart.html">My cart</a>
+                <a class="navbar-brand" href="Search.html">Search</a>
+            </nav>
+            <hr class="visible-2g visible-md" />
+
+        </div>
+        <div class="slideshow-container1">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images\home-slide2.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images\home-slide3.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images\home-slide4.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+        <footer class="blockquote-footer">
+            <div class="col-md-5 col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h5>CONNECT WITH US, SOCIALLY:</h5>
+                        <div class="social_links">
+                            <p><a class="fa fa-facebook" href="https://www.facebook.com/PrinceLionheart"
+                                    target="_blank">&nbsp;</a><a class="inst"
+                                    href="http://instagram.com/princelionheart" target="_blank">&nbsp;</a> <a
+                                    class="fa fa-twitter" href="https://twitter.com/princelionheart"
+                                    target="_blank">&nbsp;</a> <a class="fa fa-pinterest"
+                                    href="https://www.pinterest.com/princelionheart/" target="_blank">&nbsp;</a> <a
+                                    class="fa fa-youtube"
+                                    href="https://www.youtube.com/channel/UCzFwJ2uR7B4waYm8dJ1ZYhg"
+                                    target="_blank">&nbsp;</a></p>
+                        </div>
+                    </div>
+                </div>               
+                <address >&copy; 2003 – 2015 Prince Lionheart, Inc. All Rights Reserved.</address>
+            </div>    
+        </footer>
+    </div>
+</body>
+
+</html>
